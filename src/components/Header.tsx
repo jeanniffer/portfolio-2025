@@ -1,46 +1,46 @@
 import React from 'react';
 
 interface HeaderProps {
-    title: string;
+  title: string;
 }
 
 const Header: React.FC<HeaderProps> = ({ title }) => {
-    return (
-      <header
-        className="relative bg-background"
-      >
-      
-        <div
-          className="text-yellow-300 relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
-        >
-          <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-            <h1 className="text-3xl font-extrabold primary sm:text-5xl">
-              Let us find your Forever Home.
-            </h1>
-      
-            <p className="mt-4 max-w-lg accent sm:text-xl/relaxed font-mono font-light">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus
-              numquam ea!
-            </p>
-      
-            <div className="mt-8 flex flex-wrap gap-4 text-center">
-              <a
-                href="#"
-                className="block w-full rounded-sm bg-rose-600 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-              >
-                Get Started
-              </a>
-      
-              <a
-                href="#"
-                className="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-rose-600 shadow-sm hover:text-rose-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-              >
-                Learn More
-              </a>
-            </div>
+  return (
+    <header className="relative bg-slate-950 overflow-hidden">
+      {/* Background giant text */}
+      <div className="absolute inset-0 z-0 flex flex-col justify-center text-gray-100 text-[10vw] font-serif font-black opacity-5 leading-none select-none pl-12">
+  <div>Jeanniffer</div>
+  <div>Pimentel</div>
+</div>
+
+      {/* Glitchy image */}
+      <img
+  src="src/assets/JeannifferHeadshot.png"
+  alt="Jeanniffer"
+  className="absolute right-0 bottom-0 w-[75vw]"
+/>
+
+      {/* Main content */}
+      <div className="relative z-20 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+        <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+
+          <p className="mt-4 max-w-lg sm:text-xl/relaxed font-mono font-light text-lime-300">
+            Designing with heart, crafting with purpose.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4 text-center">
+            <a
+              href="mailto:hola@jeanniffer.com"
+              className="group block w-full sm:w-auto font-mono text-white text-lg px-6 py-2 rounded-full border border-transparent transition hover:text-lime-300 hover:border-lime-300"
+            >
+              <span className="text-lime-300 mr-2 transition group-hover:text-lime-300">●</span>
+              Available for new projects ↗
+            </a>
           </div>
         </div>
-      </header>
-    );
-}
-export default Header
+      </div>
+    </header>
+  );
+};
+
+export default Header;
